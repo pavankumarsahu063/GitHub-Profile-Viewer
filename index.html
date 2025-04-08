@@ -16,6 +16,10 @@
             background-color: #f0f4f8;
             padding: 20px;
           }
+
+          .dark-mode{
+            background-color: #333;
+          }
       
           .main {
             max-width: 600px;
@@ -86,6 +90,7 @@
         <h1>🔍 GitHub Profile Viewer</h1>
         <input type="text" placeholder="Enter GitHub Profile Name" id="inputText">
         <button id="btn">Search</button>
+        <button id="dark-btn">Dark</button>
 
         <div class="profile-Container">
 
@@ -122,6 +127,11 @@
             profile.append(div)
            
 
+        })
+
+        document.getElementById("dark-btn").addEventListener("click",()=>{
+            document.body.classList.toggle("dark-mode");
+            profile.classList.toggle("dark-mode");
         })
     </script>
 </body>
